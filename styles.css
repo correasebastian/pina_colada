@@ -1,0 +1,66 @@
+ 
+ *{
+     box-sizing: border-box;
+ }
+ .checkout-form-holder {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.checkout-form-holder .checkout-form-header {
+    padding-bottom: 5px;
+    height: 25px;
+}
+
+.checkout-form-holder .checkout-form-content {
+    padding: 10px 0 0;
+    position: relative;
+}
+
+.checkout-form-holder .checkout-form-inline-action {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #dfdfdf;
+}
+
+
+.checkout-v3 .checkout-form-field-set {
+    max-width: 600px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between
+}
+
+.first-name, .last-name,
+ .address-line-1, .address-line-2,
+ .city-name,.state-city-group,  .state-name, .zip-code,
+ .fld-email, .fld-phone {
+    flex-basis: 48%;
+    
+}
+
+.input-control .form-control {
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "SamsungOneLatinWeb","SamsungSans","Interface_bd",Arial,Helvetica,"San-Serif";
+    -webkit-transition: none;
+    transition: none;
+    padding: 15px 10px;
+    height: 50px;
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.select-box .form-control{
+    border-radius: 0;
+}
+
+.checkout-form-field-set{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

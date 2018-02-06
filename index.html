@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div  >
+        <div class="checkout-form-holder shipping-details-form" id="_user_address" ng-show="shippingMode == 'edit'">
+            
+            <div class="checkout-form-content">
+                
+                <div class="checkout-form-field-set" id="add_new_addr">
+                    <form name="shippingForm"  novalidate="" >
+                        <div class="checkout-form-fields">
+                            <div class=" name-row row">
+                                <div class="input-control first-name " ng-class="shippingForm.first_name.class">
+                                    <input type="text" class="form-control" placeholder="First Name"
+                                        id="_addressInfo_firstname" name="first_name"  required="">
+                                </div>
+                                <div class="input-control last-name " ng-class="shippingForm.last_name.class">
+                                    <input type="text" class="form-control" placeholder="Last Name"
+                                        id="_addressInfo_lastname" name="last_name" 
+                                        required="">
+                                </div>
+                            </div>
+                            <div class=" address-row row">
+                                <div class="input-control address-line-1" >
+                                    <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Address line 1"
+                                        id="_addressInfo_useraddress" name="line_1" 
+                                        required="">
+
+                                </div>
+                                <div class="input-control address-line-2" ng-class="shippingForm.line_2.class">
+                                    <input class="form-control" id="_addressInfo_useraddress1" type="text" name="line_2"
+                                      
+                                        placeholder="Address line 2" >
+                                </div>
+                            </div>
+                            <div class=" location-row row">
+                                <div class="input-control city-name" >
+                                    <input type="text" class="form-control " placeholder="City"
+                                        id="_addressInfo_userCity" name="city"  required="">
+                                </div>
+                                <div class="state-city-group row">
+                                    <div class="input-control select-box state-name" ng-class="shippingForm.state.class">
+                                        <select class="form-control" id="_addressInfo_userState" name="state">
+                                            <option value="State" selected="selected" label="State">State</option>
+                                            <option value="AL" label="AL">AL</option>
+                                            <option value="AK" label="AK">AK</option>
+                                            <option value="AS" label="AS">AS</option>
+                                            <option value="AZ" label="AZ">AZ</option>
+                                            <option value="AR" label="AR">AR</option>
+                                            <option value="CA" label="CA">CA</option>
+                                            <option value="CO" label="CO">CO</option>
+                                            <option value="CT" label="CT">CT</option>
+                                            <option value="DE" label="DE">DE</option>
+                                            <option value="DC" label="DC">DC</option>
+                                            <option value="FM" label="FM">FM</option>
+                                            <option value="FL" label="FL">FL</option>
+                                            <option value="GA" label="GA">GA</option>
+                                            <option value="GU" label="GU">GU</option>
+                                            <option value="HI" label="HI">HI</option>
+                                            <option value="ID" label="ID">ID</option>
+                                            <option value="IL" label="IL">IL</option>
+                                            <option value="IN" label="IN">IN</option>
+                                            <option value="IA" label="IA">IA</option>
+                                            <option value="KS" label="KS">KS</option>
+                                            <option value="KY" label="KY">KY</option>
+                                            <option value="LA" label="LA">LA</option>
+                                            <option value="ME" label="ME">ME</option>
+                                            <option value="MH" label="MH">MH</option>
+                                            <option value="MD" label="MD">MD</option>
+                                            <option value="MA" label="MA">MA</option>
+                                            <option value="MI" label="MI">MI</option>
+                                            <option value="MN" label="MN">MN</option>
+                                            <option value="MS" label="MS">MS</option>
+                                            <option value="MO" label="MO">MO</option>
+                                            <option value="MT" label="MT">MT</option>
+                                            <option value="NE" label="NE">NE</option>
+                                            <option value="NV" label="NV">NV</option>
+                                            <option value="NH" label="NH">NH</option>
+                                            <option value="NJ" label="NJ">NJ</option>
+                                            <option value="NM" label="NM">NM</option>
+                                            <option value="NY" label="NY">NY</option>
+                                            <option value="NC" label="NC">NC</option>
+                                            <option value="ND" label="ND">ND</option>
+                                            <option value="MP" label="MP">MP</option>
+                                            <option value="OH" label="OH">OH</option>
+                                            <option value="OK" label="OK">OK</option>
+                                            <option value="OR" label="OR">OR</option>
+                                            <option value="PW" label="PW">PW</option>
+                                            <option value="PA" label="PA">PA</option>
+                                            <option value="RI" label="RI">RI</option>
+                                            <option value="SC" label="SC">SC</option>
+                                            <option value="SD" label="SD">SD</option>
+                                            <option value="TN" label="TN">TN</option>
+                                            <option value="TX" label="TX">TX</option>
+                                            <option value="UT" label="UT">UT</option>
+                                            <option value="VT" label="VT">VT</option>
+                                            <option value="VA" label="VA">VA</option>
+                                            <option value="WA" label="WA">WA</option>
+                                            <option value="WV" label="WV">WV</option>
+                                            <option value="WI" label="WI">WI</option>
+                                            <option value="WY" label="WY">WY</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-control zip-code">
+                                        <input type="tel" class="form-control " placeholder="Zip Code" id="_addressInfo_userZipCode" name="postalcode" ng-pattern="/(^\d{5}$)/"
+                                            required="" maxlength="5">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" two-col-row row">
+                                <div class="input-control fld-email" >
+                                    <input type="email" class="form-control " id="_addressInfo_userEmail"
+                                        name="email" placeholder="Email"   ng-pattern="/[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/"
+                                         required="">
+                                </div>
+                                <div class="input-control fld-phone" ng-class="shippingForm.phone.class">
+                                    <input type="tel" id="_addressInfo_userPhoneNo" name="phone" class="form-control"
+                                        placeholder="Phone Number" 
+                                         ng-pattern="/^(([0-9]{3}[\/\-\s\.][0-9]{3}[\/\-\s\.][0-9]{4})|([0-9]{10}))$/"
+                                         required="" maxlength="12">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+              
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
